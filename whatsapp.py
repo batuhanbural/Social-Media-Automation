@@ -6,9 +6,6 @@ from selenium.common.exceptions import StaleElementReferenceException
 from time import sleep
 
 
-# import matplotlib
-
-
 class Whatsapp:
     def __init__(self):
         self.browser = webdriver.Edge("msedgedriver.exe")
