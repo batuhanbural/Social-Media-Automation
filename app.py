@@ -59,4 +59,4 @@ while True:
         elif insta_operation == "2":
             pass  # deneme
 
-        # Bu bir deneme yazısıdır.
+        # Bu bir deneme yazısıdır. ama yetti ya
