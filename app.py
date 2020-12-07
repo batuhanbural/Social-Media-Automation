@@ -57,4 +57,6 @@ while True:
             app.insta.browser.quit()
             del app
         elif insta_operation == "2":
-            pass # deneme
+            pass  # deneme
+
+        # Bu bir deneme yazısıdır.
