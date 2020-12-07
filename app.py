@@ -43,7 +43,8 @@ while True:
             app.spam_wp(target, spam_message, spam_count)
             del app
         elif wp_operation == "2":
-            pass
+            app = App("whatsapp")
+            app.wp.online_tracker("babaannem")
     elif operation == "2":
         insta_operation = input("Yapmak istediğiniz işlemi seçin.\n1- Message Sender\n2- **********\n")
         if insta_operation == "1":
