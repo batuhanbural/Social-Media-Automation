@@ -56,7 +56,7 @@ def search_on_web(querry_line):
     url = "https://www.google.com/search?q=" + querry_line
     webbrowser.get().open(url)
 
-# How to use code basically.
+# How to use code basically. Code made from Darquesse...
 
 # text_to_speech(text="What can i do for you")
 # while True:
