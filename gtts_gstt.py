@@ -76,6 +76,8 @@ def response(voice: str) -> object:
         text_to_speech(text="Görüşmek Üzere!!!", lang="tr")
         exit()
 
+# How to use code basically.
+
 # text_to_speech(text="What can i do for you")
 # while True:
 #     voice = speech_to_text(lang="en")
