@@ -40,7 +40,7 @@ intgrm.reply_message(["List of targets"])
 intgrm.send_message("Your message")
 ```
 
-#### Unfollow all users
+### Unfollow all users
 
 `unfollow_all()` : Use for  __unfollow all users__.
 
