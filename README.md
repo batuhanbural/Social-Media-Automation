@@ -26,10 +26,10 @@ from instagram import Instagram
 # Create an Instagram object.
 intgrm = Instagram("Your username", "Your password")
 
-# This part for login to your account.
+# Login to your account.
 intgrm.login() 
 
-# For send send message to target use this code.
+# Send message to target.
 intgrm.get_main_page()
 intgrm.reply_message(["List of targets"])
 intgrm.send_message("Your message")
@@ -47,10 +47,10 @@ from instagram import Instagram
 # Create an Instagram object.
 intgrm = Instagram("Your username", "Your password")
 
-# This part for login to your account.
+# Login to your account.
 intgrm.login() 
 
-# For send send message to target use this code.
+# Reach the homepage and unfollow all.
 intgrm.get_main_page()
 intgrm.unfollow_all()
 ```
@@ -76,9 +76,9 @@ from whatsapp import Whatsapp
 # Create an Whatsapp object.
 wp = Whatsapp()
 
-# This part for login to your account. 
+# Login to your account. 
 wp.login()
 
-# For spam send message to target use this code.
+# Spam messages
 wp.spam_messages("Target", "Spam message", spam_count)
 ```
