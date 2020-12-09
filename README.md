@@ -53,7 +53,7 @@ intgrm.login()
 intgrm.get_main_page()
 intgrm.unfollow_all()
 ```
-
+\\
 > ### Usage of WhatsApp
 
 This is how to use whatsapp.py
@@ -64,6 +64,8 @@ It is easy to send message with this code!
 
 `login()` : Use for login your WhatsApp acoount. (In this part it will ask you for scan the QR code. And if you ***don't scan the QR code*** code will **__not__** continue.)
 `spam_messages()` : Use for spam messages to target.
+
+###### The sample usage of code below. :point_down:
 
 ```python
 from whatsapp import Whatsapp
