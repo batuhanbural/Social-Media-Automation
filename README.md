@@ -10,10 +10,11 @@ This is how to use instagram.py
 `login()` : Use for login to your account.
 
 `get_main_page()` : Use for reach the home page of instagram. 
--If you don't use this code wou can get some errors.
+- If you don't use this code wou can get some errors.
 
 
 `reply_message()` : Use for add targets to message list.
+
 `send_message()` : Use for send message to tagets.
 
 ```python
@@ -33,5 +34,5 @@ intgrm.send_message("Your message")
 
 #### Unfollow all users
 
-`unfollow_all()` : Use for  unfollow all users.
+`unfollow_all()` : Use for  __unfollow all users__.
 
