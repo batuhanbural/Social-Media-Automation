@@ -10,12 +10,14 @@ This is how to use instagram.py
 `login()` : Use for login to your account.
 
 `get_main_page()` : Use for reach the home page of instagram. 
-- If you don't use this code wou can get some errors.
+- If you don't use this code you can get some errors.
 
 
 `reply_message()` : Use for add targets to message list.
 
-`send_message()` : Use for send message to tagets.
+`send_message()` : Use for send message to targets.
+
+###### The sample usage of code below. :point_down:
 
 ```python
 from instagram import Instagram
@@ -36,3 +38,26 @@ intgrm.send_message("Your message")
 
 `unfollow_all()` : Use for  __unfollow all users__.
 
+### Usage of WhatsApp
+
+This is how to use whatsapp.py
+
+#### Spam messages
+
+It is easy to send message with this code!
+
+`login()` : Use for login your WhatsApp acoount. (In this part it will ask you for scan the QR code. And if you ***don't scan the QR code*** code will **__not__** continue.)
+`spam_messages()` : Use for spam messages to target.
+
+```python
+from whatsapp import Whatsapp
+
+# Create an Whatsapp object.
+wp = Whatsapp()
+
+# This part for login to your account. 
+wp.login()
+
+# For spam send message to target use this code.
+wp.spam_messages("Target", "Spam message", spam_count)
+```
