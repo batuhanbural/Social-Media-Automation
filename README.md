@@ -38,6 +38,22 @@ intgrm.send_message("Your message")
 
 `unfollow_all()` : Use for  __unfollow all users__.
 
+###### The sample usage of code below. :point_down:
+
+```python
+from instagram import Instagram
+
+# Create an Instagram object.
+intgrm = Instagram("Your username", "Your password")
+
+# This part for login to your account.
+intgrm.login() 
+
+# For send send message to target use this code.
+intgrm.get_main_page()
+intgrm.unfollow_all()
+```
+
 ### Usage of WhatsApp
 
 This is how to use whatsapp.py
