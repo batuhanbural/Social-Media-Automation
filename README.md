@@ -1,6 +1,6 @@
 # Social Media Automation
 
-This is a ***selenium based*** social media automation application made with python. It will be available for *****all social media platforms***** very soon...
+This is a ***__selenium based__*** social media automation application made with python. It will be available for *****all social media platforms***** very soon...
 
 > ## Usage of Instagram
 
