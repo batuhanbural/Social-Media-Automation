@@ -29,6 +29,7 @@ intgrm.login()
 intgrm.get_main_page()
 intgrm.reply_message(["List of targets"])
 intgrm.send_message("Your message")
+```
 
 #### Unfollow all users
 
