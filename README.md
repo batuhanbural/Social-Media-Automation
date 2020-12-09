@@ -1,11 +1,11 @@
 # Social Media Automation
 It's a Selenium based social media automation app.
 
-> ### Usage of Instagram
+> ## Usage of Instagram
 
 This is how to use instagram.py
 
-#### Sending messages
+### Sending messages
 
 `login()` : Use for login to your account.
 
@@ -54,11 +54,11 @@ intgrm.get_main_page()
 intgrm.unfollow_all()
 ```
   
-> ### Usage of WhatsApp
+> ## Usage of WhatsApp
 
 This is how to use whatsapp.py
 
-#### Spam messages
+### Spam messages
 
 It is easy to send message with this code!
 
