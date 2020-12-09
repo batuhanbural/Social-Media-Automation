@@ -1,8 +1,8 @@
-# Social Media Automation
+<h1 align="center">Welcome to Social Media Automation 👋</h1>
 
-This is a ***__selenium based__*** social media automation application made with python. **instagram.py** and **whatsapp.py** are our main codes. **app.py** is sample code for **instagram.py** and **whatsapp.py** used together. It will be available for *****all social media platforms***** very soon...
+> This is a ***__selenium based__*** social media automation application made with python. **instagram.py** and **whatsapp.py** are our main codes. **app.py** is sample code for **instagram.py** and **whatsapp.py** used together. It will be available for *****all social media platforms***** very soon...
 
-> ## Usage of Instagram
+## ✨ Usage of Instagram
 
 This is how to use instagram.py
 
@@ -56,7 +56,7 @@ intgrm.unfollow_all()
 ```
   
   
-> ## Usage of WhatsApp
+## ✨ Usage of WhatsApp
 
 This is how to use whatsapp.py
 
