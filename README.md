@@ -1,11 +1,19 @@
 # Social-Media-Automation
 Its a Selenium based social media automation app.
 
-## Usage of Instagram
+### Usage of Instagram
 
 This is how to use instagram.py
 
-### Sending messages
+#### Sending messages
+
+`login()` : Use for login to your account.
+
+`get_main_page()` : Use for reach the home page of instagram. 
+>If you don't use this code wou can get some errors.
+
+
+`reply_message()` : Use for add targets to message list.
 
 ```python
 from instagram import Instagram
