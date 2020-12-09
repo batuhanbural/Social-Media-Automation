@@ -14,7 +14,7 @@ This is how to use instagram.py
 
 \
 `reply_message()` : Use for add targets to message list.\
-``send_message()` : Use for send message to tagets.
+`send_message()` : Use for send message to tagets.
 
 ```python
 from instagram import Instagram
