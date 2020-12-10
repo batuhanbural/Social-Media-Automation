@@ -2,13 +2,14 @@ from selenium import webdriver
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.wait import WebDriverWait
 
 
 class Instagram:
     def __init__(self, username, password):
         self.browser = webdriver.Edge("msedgedriver.exe")
+        self.browser.maximize_window()
         self.username = username
         self.password = password
 
@@ -81,7 +82,7 @@ class Instagram:
 
                 # get element  after explicitly waiting for 10 seconds
                 element = WebDriverWait(self.browser, 10).until(
-                    EC.presence_of_element_located((By.CSS_SELECTOR, "body > div.RnEpo.Yx5HN > div > div > "
+                    ec.presence_of_element_located((By.CSS_SELECTOR, "body > div.RnEpo.Yx5HN > div > div > "
                                                                      "div.Igw0E.IwRSH.eGOV_.vwCYk.i0EQd > "
                                                                      "div.Igw0E.IwRSH.eGOV_.vwCYk._3wFWr > div > div > "
                                                                      "div.Igw0E.rBNOH.YBx95.ybXk5._4EzTm.soMvl > "
@@ -133,3 +134,9 @@ class Instagram:
                 isGot = 1
             except WebDriverException:
                 continue
+
+
+intgrm = Instagram("denemedeneme7552", "123456deneme")
+intgrm.login()
+intgrm.reply_message(["utkuhayrat", "efekanhezer"])
+intgrm.send_message("Hi!")
