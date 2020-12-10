@@ -87,3 +87,4 @@ wp.login()
 # Spam messages
 wp.spam_messages("Target", "Spam message", spam_count)
 ```
+"# resources" 
