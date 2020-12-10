@@ -1,9 +1,9 @@
-from whatsapp import Whatsapp
 from instagram import Instagram
+from whatsapp import Whatsapp
 
 
 class App:
-    def __init__(self, application, **kwargs):
+    def __init__(self, application, **kwargs):  # **kwargs = dict {"name": "batuhan", "surname": "bural"}
         self.username = ""
         self.password = ""
 
@@ -41,6 +41,7 @@ while True:
 
             app = App("whatsapp")
             app.spam_wp(target, spam_message, spam_count)
+            app.wp.browser.quit()
             del app
         elif wp_operation == "2":
             app = App("whatsapp")
