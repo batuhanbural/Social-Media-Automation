@@ -3,7 +3,7 @@ from whatsapp import Whatsapp
 
 
 class App:
-    def __init__(self, application, **kwargs):  # **kwargs = dict {"name": "batuhan", "surname": "bural"}
+    def __init__(self, application: str, **kwargs):
         self.username = ""
         self.password = ""
 
