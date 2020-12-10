@@ -86,14 +86,10 @@ class Instagram:
                                                                      "div.Igw0E.IwRSH.eGOV_.vwCYk._3wFWr > div > div > "
                                                                      "div.Igw0E.rBNOH.YBx95.ybXk5._4EzTm.soMvl > "
                                                                      "button > span")))
-                # click the element
                 element.click()
 
             except WebDriverException:
                 pass
-
-            # users = self.browser.find_elements_by_xpath("""/html/body/div[5]/div/div/div[2]/div[2]""")
-            # users[0].find_element_by_css_selector("div").click()
 
         next_button = self.browser.find_element_by_xpath("""/html/body/div[5]/div/div/div[1]/div/div[2]/div""")
         next_button.click()
