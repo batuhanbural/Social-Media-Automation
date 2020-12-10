@@ -1,7 +1,9 @@
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import WebDriverException
-import time
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 class Instagram:
@@ -31,7 +33,7 @@ class Instagram:
             except WebDriverException:
                 continue
 
-    def send_message(self, message):  # print("Hi!")
+    def send_message(self, message):
         isConnected = 0
         while isConnected == 0:
             try:
@@ -77,12 +79,21 @@ class Instagram:
                 find_user.send_keys(target)
                 find_user.send_keys(Keys.ENTER)
 
-                time.sleep(3)
+                # get element  after explicitly waiting for 10 seconds
+                element = WebDriverWait(self.browser, 10).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, "body > div.RnEpo.Yx5HN > div > div > "
+                                                                     "div.Igw0E.IwRSH.eGOV_.vwCYk.i0EQd > "
+                                                                     "div.Igw0E.IwRSH.eGOV_.vwCYk._3wFWr > div > div > "
+                                                                     "div.Igw0E.rBNOH.YBx95.ybXk5._4EzTm.soMvl > "
+                                                                     "button > span")))
+                # click the element
+                element.click()
 
-                users = self.browser.find_elements_by_xpath("""/html/body/div[5]/div/div/div[2]/div[2]""")
-                users[0].find_element_by_css_selector("div").click()
-            except Exception as err:
-                print(err)
+            except WebDriverException:
+                pass
+
+            # users = self.browser.find_elements_by_xpath("""/html/body/div[5]/div/div/div[2]/div[2]""")
+            # users[0].find_element_by_css_selector("div").click()
 
         next_button = self.browser.find_element_by_xpath("""/html/body/div[5]/div/div/div[1]/div/div[2]/div""")
         next_button.click()
@@ -127,12 +138,13 @@ class Instagram:
             except WebDriverException:
                 continue
 
-# y = Instagram("denemedeneme0342@gmail.com", "123456deneme")
+
+y = Instagram("denemedeneme0342@gmail.com", "123456deneme")
+
+y.login()
 #
-# y.login()
-#
-# y.reply_message(["utkuhayrat", "efekanhezer"])
-# y.send_message("Bu batunun saçma sapan denemelerinden  biridir. (Python ile gönderildi.)")
+y.reply_message(["utkuhayrat", "efekanhezer"])
+y.send_message("Bu batunun saçma sapan denemelerinden  biridir. (Python ile gönderildi.)")
 #
 # y.get_main_page()
 # y.unfollow_all()
