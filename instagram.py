@@ -133,15 +133,3 @@ class Instagram:
                 isGot = 1
             except WebDriverException:
                 continue
-
-
-y = Instagram("denemedeneme0342@gmail.com", "123456deneme")
-
-y.login()
-#
-y.reply_message(["utkuhayrat", "efekanhezer"])
-y.send_message("Bu batunun saçma sapan denemelerinden  biridir. (Python ile gönderildi.)")
-#
-# y.get_main_page()
-# y.unfollow_all()
-# index

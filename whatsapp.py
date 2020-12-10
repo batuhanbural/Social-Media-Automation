@@ -1,9 +1,10 @@
+from time import sleep
+
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.common.exceptions import WebDriverException
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import StaleElementReferenceException
-from time import sleep
+from selenium.common.exceptions import WebDriverException
+from selenium.webdriver.common.keys import Keys
 
 
 class Whatsapp:
@@ -57,8 +58,3 @@ class Whatsapp:
                 print("Kullanıcı Offline")
             except StaleElementReferenceException:
                 print("Kullanıcı Offline")
-
-# x = Whatsapp()
-#
-# x.login()
-# x.spam_messages("Kendim", "a", 5)
