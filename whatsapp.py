@@ -1,3 +1,4 @@
+import os
 from time import sleep
 
 from selenium import webdriver
@@ -16,7 +17,7 @@ class Whatsapp:
         sleep(2)
         self.browser.get("https://web.whatsapp.com/")
 
-    def find_user(self, user_name):
+    def find_user(self, user_name: str):
         isSearched = 0
         while isSearched == 0:
             try:
@@ -27,7 +28,12 @@ class Whatsapp:
             except WebDriverException:
                 continue
 
-    def spam_messages(self, target, spam, count):
+    def send_message(self, message: str):
+        text_input = self.browser.find_element_by_xpath("""//*[@id="main"]/footer/div[1]/div[2]/div/div[2]""")
+        text_input.send_keys(message)
+        text_input.send_keys(Keys.ENTER)
+
+    def spam_messages(self, target: str, spam: str, count: int):
         isLoggedIn = 0
         while isLoggedIn == 0:
             try:
@@ -46,7 +52,62 @@ class Whatsapp:
             except WebDriverException:
                 continue
 
-    def online_tracker(self, target):
+    def spam_random_messages(self, target: str, spam_file: str):
+        self.find_user(target)
+
+        isReached = 0
+        while isReached == 0:
+            try:
+                spam_file = open(r'{}'.format(spam_file), 'r', encoding="utf-8")
+                Lines = spam_file.readlines()
+
+                for line in Lines:
+                    self.send_message(line.strip())
+                isReached = 1
+            except WebDriverException:
+                continue
+
+    def send_doc(self, target: str, file_path: str):
+        isAttach = 0
+        while isAttach == 0:
+            try:
+                self.find_user(target)
+
+                attach_button = self.browser.find_element_by_xpath(
+                    """//*[@id="main"]/footer/div[1]/div[1]/div[2]/div/div""")
+                attach_button.click()
+
+                image_box = self.browser.find_element_by_xpath(
+                    """//*[@id="main"]/footer/div[1]/div[1]/div[2]/div/span/div/div/ul/li[1]/button/input""")
+                image_box.send_keys(r"{}".format(file_path))
+
+                isAttach = 1
+            except WebDriverException:
+                continue
+        isSend = 0
+        while isSend == 0:
+            try:
+                send_button = self.browser.find_element_by_xpath(
+                    """//*[@id="app"]/div/div/div[2]/div[2]/span/div/span/div/div/div[2]/span/div/div""")
+                send_button.click()
+                isSend = 1
+            except WebDriverException:
+                continue
+
+    def send_docs(self, target: str, directory_path: str):
+        self.find_user(target)
+
+        files = os.listdir(r"{}".format(directory_path))
+        for file in files:
+            isAdd = 0
+            while isAdd == 0:
+                try:
+                    self.send_doc("Kendim", directory_path + "/" + file)
+                    isAdd = 1
+                except WebDriverException:
+                    continue
+
+    def online_tracker(self, target: str):  # Beta
         self.login()
         self.find_user(target)
         while True:
