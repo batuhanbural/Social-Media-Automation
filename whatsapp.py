@@ -67,12 +67,10 @@ class Whatsapp:
             except WebDriverException:
                 continue
 
-    def send_doc(self, target: str, file_path: str):
+    def send_doc(self, file_path: str):
         isAttach = 0
         while isAttach == 0:
             try:
-                self.find_user(target)
-
                 attach_button = self.browser.find_element_by_xpath(
                     """//*[@id="main"]/footer/div[1]/div[1]/div[2]/div/div""")
                 attach_button.click()
@@ -94,18 +92,16 @@ class Whatsapp:
             except WebDriverException:
                 continue
 
-    def send_docs(self, target: str, directory_path: str):
-        self.find_user(target)
+    def send_docs(self, directory_path: str):
+        files = ""
+        try:
+            files = os.listdir(r"{}".format(directory_path))
+        except FileNotFoundError:
+            print("Please enter a valid path!")
 
-        files = os.listdir(r"{}".format(directory_path))
         for file in files:
-            isAdd = 0
-            while isAdd == 0:
-                try:
-                    self.send_doc(target, directory_path + "/" + file)
-                    isAdd = 1
-                except WebDriverException:
-                    continue
+            self.send_doc(directory_path + "/" + file)
+            sleep(2)
 
     def online_tracker(self, target: str):  # Beta
         self.login()
