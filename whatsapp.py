@@ -102,7 +102,7 @@ class Whatsapp:
             isAdd = 0
             while isAdd == 0:
                 try:
-                    self.send_doc("Kendim", directory_path + "/" + file)
+                    self.send_doc(target, directory_path + "/" + file)
                     isAdd = 1
                 except WebDriverException:
                     continue
