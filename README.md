@@ -8,7 +8,8 @@ This is how to use instagram.py
 
 
 <p align="center">
-  <img width="700" align="center" src="https://github.com/batuhanbural/resources/blob/main/docs/usage.gif" alt="demo"/>
+  <img width="700" align="center" src="![ex2 (3)](https://user-images.githubusercontent.com/60934501/101936564-bed94800-3bf1-11eb-90b7-84e449c20e06.gif)
+" alt="demo"/>
 </p>
 
 ### Sending messages
